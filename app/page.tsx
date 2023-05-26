@@ -37,11 +37,12 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="post" className="post bg-secondary">
-        <div className="container h-screen px-20">
-          <div className="flex flex-wrap">
+      <section id="post" className="post bg-secondary py-[60px]">
+        <div className="container px-20 mx-auto">
+          <h2 className="text-white text-3xl text-center">Post: </h2>
+          <div className="flex flex-wrap justify-center items-center self-center">
             {posts.map((post: any) => (
-              <div className="w-full lg:w-1/3" key={post.userId}>
+              <div className="w-full lg:w-1/3 my-2 justify-center self-center" key={post.userId}>
                 <div className="card">
                   <h1>{post.title}</h1>
                   <p>{post.body}</p>
@@ -51,8 +52,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <h1>Home</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quisquam consectetur nam. Ratione nam sapiente dolorum eaque ducimus ullam pariatur iste?</p>
     </>
   );
 }
